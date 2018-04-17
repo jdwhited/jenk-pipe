@@ -3,8 +3,11 @@ pipeline {
   stages {
     stage('Say Hello') {
       steps {
-        echo 'Hello World!'
+        echo "hello ${MY_NAME}!"
       }
     }
+  }
+  environment {
+    MY_NAME = 'Mary'
   }
 }
